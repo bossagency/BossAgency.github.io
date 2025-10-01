@@ -57,11 +57,13 @@
     }
 
     .logo {
-      width: 32px; height: 32px;
-      border-radius: 8px;
-      display: block;
-      object-fit: cover;
-      box-shadow: 0 0 0 1px var(--border), 0 2px 10px rgba(0,0,0,.4);
+      width: 40px; height: 40px;           /* Daha belirgin ve net */
+      aspect-ratio: 1 / 1;                 /* Kare oranı sabit */
+      border-radius: 9999px;               /* Tam daire */
+      object-fit: cover;                   /* Taşmadan ortadan kırp */
+      display: block;                      /* Satır içi boşlukları kaldır */
+      border: 1px solid var(--border);     /* İnce çerçeve */
+      box-shadow: 0 2px 10px rgba(0,0,0,.35);
     }
 
     .brand span {
