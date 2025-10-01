@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Soyo – Ajans Bilgi</title>
+  <meta name="description" content="Soyo uygulaması üzerinden ajansımıza bağlı yayıncı için bilgi sayfası." />
+  <meta property="og:title" content="Soyo – Ajans Bilgi" />
+  <meta property="og:description" content="Soyo uygulaması üzerinden ajansımıza bağlı yayıncı için bilgi sayfası." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --card: #111;
+      --text: #f2f2f2;
+      --muted: #cfcfcf;
+      --border: #1e1e1e;
+      --accent: #fff; /* yalnızca siyah-beyaz */
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: radial-gradient(1200px 800px at 80% -10%, #161616 0%, var(--bg) 60%);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.6;
+      letter-spacing: 0.1px;
+    }
+
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    header.site {
+      position: sticky;
+      top: 0;
+      backdrop-filter: saturate(120%) blur(6px);
+      background: color-mix(in srgb, var(--bg) 80%, #000 20% / 60%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 20px;
+      max-width: 920px;
+      margin: 0 auto;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .logo {
+      width: 28px; height: 28px;
+      border-radius: 8px;
+      background: conic-gradient(from 180deg, #fff 0 25%, #000 25% 50%, #fff 50% 75%, #000 75% 100%);
+      box-shadow: 0 0 0 1px var(--border), 0 2px 10px rgba(0,0,0,.4);
+    }
+
+    .brand span {
+      font-weight: 700;
+      letter-spacing: .4px;
+    }
+
+    .hero {
+      margin-top: 28px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 10px 40px rgba(0,0,0,.35);
+    }
+
+    .hero h1 {
+      font-size: clamp(1.4rem, 2.4vw + 1rem, 2.2rem);
+      line-height: 1.25;
+      margin: 0 0 12px;
+      color: var(--accent);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    @media (min-width: 760px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card {
+      background: linear-gradient(180deg, #131313, #0f0f0f);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 18px;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    section.card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,0,0,.35);
+    }
+
+    section.card h2 {
+      font-size: 1.05rem;
+      letter-spacing: .3px;
+      margin: 0 0 10px;
+      color: var(--text);
+    }
+
+    ul { list-style: none; padding: 0; margin: 0; }
+
+    li { 
+      position: relative; 
+      padding-left: 22px; 
+      margin: 8px 0; 
+      color: var(--muted);
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      left: 0; top: .62em;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 3px rgba(255,255,255,.08);
+    }
+
+    .footer {
+      margin-top: 28px;
+      color: #9b9b9b;
+      font-size: .9rem;
+      text-align: center;
+      border-top: 1px dashed var(--border);
+      padding-top: 20px;
+    }
+
+    /* İçerik tipografisi */
+    .kicker {
+      font-size: .86rem;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      color: #dcdcdc;
+    }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <a class="brand" href="#top" aria-label="Soyo – Ajans Bilgi">
+      <div class="logo" aria-hidden="true"></div>
+      <span>Soyo • Ajans Bilgi</span>
+    </a>
+  </header>
+
+  <main class="wrap" id="top">
+    <section class="hero">
+      <p class="kicker">Bilgilendirme</p>
+      <h1>Soyo uygulaması üzerinden Ajansımıza bağlı olacak yayıncı aranıyor!</h1>
+      <ul>
+        <li>Kendi hesabını aç, uygulamada sohbet et, telefon ve görüntülü görüşme yap, görüşme başına gelir kazan.</li>
+        <li>Haftalık/aylık performans bonusu</li>
+        <li>Güvenli ödeme, sözleşmeli çalışma</li>
+      </ul>
+    </section>
+
+    <div class="grid" aria-label="Bilgi bölümleri">
+      <section class="card" id="kimler-icin-uygun">
+        <h2>Kimler için uygun?</h2>
+        <ul>
+          <li>İletişimi güçlü, sabırlı, zamanını verebilecek, 18 yaşından büyük kişiler.</li>
+        </ul>
+      </section>
+
+      <section class="card" id="uygulamada-yapacaklarin">
+        <h2>Uygulamada yapacağın şeyler</h2>
+        <ul>
+          <li>Uygulamada kullanıcılarla yazışacak, talebe göre telefon/görüntülü konuşma yapacaksın.</li>
+          <li>Uygulamada yeni bir profil açarak ajansımızla eşleştirileceksin.</li>
+        </ul>
+      </section>
+
+      <section class="card" id="gelir-sistemi" style="grid-column: 1 / -1;">
+        <h2>Gelir Sistemi</h2>
+        <ul>
+          <li>Mesaj: Cevapladığın her mesaj = 53 elmas</li>
+          <li>Sesli arama: Dakika = 315 elmas</li>
+          <li>Görüntülü arama: Dakika = 630 elmas</li>
+          <li>Günlük “Hi” hakkı: 100 (uygulamadaki Hi butonuyla otomatik mesaj)</li>
+          <li>4400 elmas 1 dolara eşittir.</li>
+          <li>Ajans tarafından belirli bir elmasa ulaşınca tl bazında günlük ve haftalık olarak bonus verilecektir.</li>
+          <li>Günlük 1 çekim hakkıyla hızlıca biriktirdiğiniz elmas kadar kazanç alabilirsiniz.</li>
+        </ul>
+      </section>
+    </div>
+
+    <p class="footer">Metindeki hiçbir ifade değiştirilmeden web düzenine uyarlanmıştır. Siyah-beyaz (monokrom) tema.</p>
+  </main>
+</body>
+</html>
