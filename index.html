@@ -154,11 +154,12 @@
       color: #dcdcdc;
     }
   </style>
+  <link rel="preload" as="image" href="./profile.jpg?v=1" />
 </head>
 <body>
   <header class="site">
     <a class="brand" href="#top" aria-label="Boss Agency">
-      <img class="logo" src="profile.jpg" alt="Boss Agency Logo" />
+      <img class="logo" src="./profile.jpg?v=1" alt="Boss Agency Logo" onerror="this.onerror=null;this.src='./avatar-fallback.png';" />
       <span>Boss Agency</span>
     </a>
   </header>
@@ -206,5 +207,7 @@
 
     <p class="footer">Metindeki hiçbir ifade değiştirilmeden web düzenine uyarlanmıştır. Siyah-beyaz (monokrom) tema.</p>
   </main>
+  <!-- Basit bir yedek görsel oluşturmak isteyenler icin -->
+  <!-- avatar-fallback.png dosyasını eklemediyseniz yukarıdaki onerror satırı etkisiz kalır. İsterseniz silin. -->
 </body>
 </html>
